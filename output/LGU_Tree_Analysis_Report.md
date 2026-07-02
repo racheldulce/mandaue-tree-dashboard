@@ -15,19 +15,19 @@
 
 | Indicator | Value |
 |---|---|
-| Total Trees Tagged | 9,342 trees across 27 barangays |
+| Total Trees Tagged | 9,327 trees across 27 barangays |
 | Unique Species Recorded | 67+ species |
-| Endemic Trees | 932 trees (9.98% of total) |
+| Endemic Trees | 932 trees (10.0% of total) |
 | Average DBH | ~25 cm |
 
 ### Distribution Status Breakdown
 
 | Status | Count | Percentage |
 |---|---|---|
-| Indigenous | 6,513 | 69.7% |
-| Introduced | 1,631 | 17.5% |
-| Endemic | 932 | 9.98% |
-| Unknown | 266 | 2.8% |
+| Indigenous | 6,502 | 69.7% |
+| Introduced | 1,637 | 17.6% |
+| Endemic | 932 | 10.0% |
+| Unknown | 256 | 2.7% |
 | TOTAL | 9,342 | 100% |
 
 ### Barangay Tree Counts
@@ -66,21 +66,21 @@
 
 | Rank | Species | Count | Status |
 |---|---|---|---|
-| 1 | Mahogany | 1,505 | Indigenous |
-| 2 | Tugas (Vitex parviflora) | 843 | ENDEMIC |
-| 3 | Talisay | 832 | Indigenous |
-| 4 | Narra | 753 | Indigenous |
-| 5 | Dakit | 526 | Indigenous |
-| 6 | Nem Tree | 466 | Introduced |
-| 7 | Indian Tree | 457 | Introduced |
-| 8 | Fire Tree | 301 | Indigenous |
-| 9 | Awom | 260 | Indigenous |
-| 10 | Unidentified | 260 | Unknown |
-| 11 | Rubber Tree | 238 | Indigenous |
-| 12 | Mangga | 230 | Indigenous |
-| 13 | Indian (variant) | 206 | Introduced |
-| 14 | Nangka | 201 | Indigenous |
-| 15 | Mansinitas | 188 | Indigenous |
+| 1 | Mahogany | 1,481 | Indigenous |
+| 2 | Tugas (Vitex parviflora) | 840 | ENDEMIC |
+| 3 | Talisay | 819 | Indigenous |
+| 4 | Narra | 745 | Indigenous |
+| 5 | Dakit | 515 | Indigenous |
+| 6 | Indian tree | 444 | Introduced |
+| 7 | Nem tree | 435 | Introduced |
+| 8 | Fire tree | 301 | Indigenous |
+| 9 | Unidentified | 260 | Unknown |
+| 10 | Awom | 255 | Indigenous |
+| 11 | Rubber tree | 236 | Indigenous |
+| 12 | Mangga | 223 | Indigenous |
+| 13 | Indian | 203 | Introduced |
+| 14 | Mansinitas | 185 | Indigenous |
+| 15 | Nangka | 184 | Indigenous |
 
 ### Endemic Trees per Barangay (Top)
 
@@ -99,10 +99,10 @@
 | Barangay | Introduced Count | % of Local Total |
 |---|---|---|
 | Casuntingan | 223 | 55.8% |
-| Guizo | 143 | 26.9% |
+| Subangdaku | 178 | 15.3% |
+| Guizo | 141 | 27.3% |
 | Pakna-an | 102 | 24.7% |
 | Maguikay | 87 | 25.4% |
-| Canduman | 80 | 26.1% |
 
 ---
 
@@ -110,7 +110,7 @@
 *(What is Happening — Relationships, Clusters, Anomalies)*
 
 1. EXTREME CONCENTRATION AT TWO BARANGAYS
-   Subangdaku (1,162) and Umapad (1,133) together hold 24.7% of all 9,342 trees 
+   Subangdaku (1,162) and Umapad (1,133) together hold 24.6% of all 9,327 trees 
    despite being just 2 of 27 barangays. A significant spatial imbalance.
 
 2. LOW-COVERAGE BARANGAYS
@@ -147,7 +147,7 @@
    in diversity — Guizo is more ecologically dense per unit area.
 
 10. MAHOGANY DOMINANCE
-    1,505 trees = 16.1% of all trees. Reflects past reforestation programs, 
+    1,481 trees = 15.9% of all trees. Reflects past reforestation programs, 
     not natural diversity. May signal plantation dependency over ecological balance.
 
 ---

@@ -1,0 +1,42 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="Tree Inventory Analysis" version="3.28.0-Firenze">
+  <projectlayers>
+    <maplayer type="vector" geometry="Point" hasScaleBasedVisibilityFlag="0">
+      <id>tree_points_id</id>
+      <datasource>c:\Users\LENOVO\Documents\tree maps - Copy\outputs\data\tree_inventory_cleaned.gpkg|layername=tree_points</datasource>
+      <layername>Analysis 1: Tree Distribution</layername>
+      <provider encoding="UTF-8">ogr</provider>
+    </maplayer>
+    <maplayer type="vector" geometry="Polygon" hasScaleBasedVisibilityFlag="0">
+      <id>priority_id</id>
+      <datasource>c:\Users\LENOVO\Documents\tree maps - Copy\outputs\data\tree_inventory_cleaned.gpkg|layername=conservation_priority</datasource>
+      <layername>Analysis 4: Conservation Priority</layername>
+      <provider encoding="UTF-8">ogr</provider>
+    </maplayer>
+    <maplayer type="vector" geometry="Polygon" hasScaleBasedVisibilityFlag="0">
+      <id>hotspot_id</id>
+      <datasource>c:\Users\LENOVO\Documents\tree maps - Copy\outputs\data\tree_inventory_cleaned.gpkg|layername=hotspot_grid</datasource>
+      <layername>Analysis 3: Native Hotspot Grid</layername>
+      <provider encoding="UTF-8">ogr</provider>
+    </maplayer>
+    <maplayer type="vector" geometry="Polygon" hasScaleBasedVisibilityFlag="0">
+      <id>barangay_id</id>
+      <datasource>c:\Users\LENOVO\Documents\tree maps - Copy\outputs\data\tree_inventory_cleaned.gpkg|layername=barangay_boundaries</datasource>
+      <layername>Barangay Boundaries</layername>
+      <provider encoding="UTF-8">ogr</provider>
+    </maplayer>
+  </projectlayers>
+  <layer-tree-group name="" expanded="1" checked="Qt::Checked">
+    <customproperties>
+      <Option/>
+    </customproperties>
+    <layer-tree-group name="Analyses" expanded="1" checked="Qt::Checked">
+      <layer-tree-layer name="Analysis 1: Tree Distribution" id="tree_points_id" expanded="1" checked="Qt::Checked"/>
+      <layer-tree-layer name="Analysis 3: Native Hotspot Grid" id="hotspot_id" expanded="1" checked="Qt::Checked"/>
+      <layer-tree-layer name="Analysis 4: Conservation Priority" id="priority_id" expanded="1" checked="Qt::Checked"/>
+    </layer-tree-group>
+    <layer-tree-group name="Base Layers" expanded="1" checked="Qt::Checked">
+      <layer-tree-layer name="Barangay Boundaries" id="barangay_id" expanded="1" checked="Qt::Checked"/>
+    </layer-tree-group>
+  </layer-tree-group>
+</qgis>
