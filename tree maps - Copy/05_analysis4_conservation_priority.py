@@ -219,19 +219,13 @@ def build_priority_map(figsize=(14, 12), label_size=6.0, title_size=14,
         legend_elements.append(
             Line2D([0], [0], marker='o', color='w', markerfacecolor=PRIORITY_COLORS[cls],
                    markeredgecolor=edge, markersize=8 * markerscale,
-                   label=f'{lbl} [score: {rang}] (n={n_pts:,} pts)')
+                   label=f'{lbl}')
         )
 
-    score_components = [
-        mpatches.Patch(facecolor='none', edgecolor='none', label=''),
-        mpatches.Patch(facecolor='none', edgecolor='none', label='Score Components (weights):'),
-        mpatches.Patch(facecolor='none', edgecolor='none', label='  Status (50%): Endemic=5, Indig=3, Intro=1, Unk=0'),
-        mpatches.Patch(facecolor='none', edgecolor='none', label='  Richness (30%): unique spp per barangay'),
-        mpatches.Patch(facecolor='none', edgecolor='none', label='  Large Tree (20%): DBH > 50 cm count'),
-    ]
+    score_components = []
 
     legend = ax.legend(
-        handles=legend_elements + score_components, title='Conservation Priority Class (Points)',
+        handles=legend_elements + score_components, title='Conservation Priority Class',
         title_fontsize=legend_fontsize + 0.5, fontsize=legend_fontsize - 0.5,
         loc='upper left', bbox_to_anchor=(1.02, 1), frameon=True, framealpha=0.95, edgecolor='#CCCCCC', facecolor='white'
     )
@@ -244,25 +238,17 @@ def build_priority_map(figsize=(14, 12), label_size=6.0, title_size=14,
     # ── Axes ─────────────────────────────────────────────────────────────────
     ax.set_xlabel('Easting (m) — WGS 84 / UTM Zone 51N', fontsize=7, color='#444444')
     ax.set_ylabel('Northing (m) — WGS 84 / UTM Zone 51N', fontsize=7, color='#444444')
+    ax.ticklabel_format(style='plain')
 
     # ── Title ────────────────────────────────────────────────────────────────
     ax.set_title(
         'Tree Points by Conservation Priority\nMandaue City, Cebu, Philippines',
         fontsize=title_size, fontweight='bold', color='#111111', pad=12, loc='left'
     )
-    ax.text(0.0, 1.01,
-            f'Valid mapped trees: {len(gdf_pts):,}  |  '
-            f'Composite score: 50% Status + 30% Richness + 20% Large Tree  |  EPSG:32651',
-            transform=ax.transAxes, fontsize=7, color='#555555', va='bottom')
+    # Subtitle removed per request
 
     # ── Footer ───────────────────────────────────────────────────────────────
-    footer = (
-        'Projection: WGS 84 / UTM Zone 51N (EPSG:32651)  |  '
-        'Data Sources: Tree Inventory Survey 2024; Barangay Boundaries — LGU Mandaue City  |  '
-        'Analysis: Python 3 / GeoPandas / mapclassify  |  '
-        'Figure 4. Point-Based Conservation Priority Map'
-    )
-    fig.text(0.01, 0.005, footer, fontsize=footer_size - 0.5, color='#666666', style='italic')
+    # Footer removed per request
 
     plt.tight_layout(rect=[0, 0.02, 1, 1])
     return fig, ax

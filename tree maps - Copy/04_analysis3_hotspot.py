@@ -258,7 +258,7 @@ def build_hotspot_map(figsize=(14, 12), label_size=6.0, title_size=14,
             Line2D([0], [0], marker='o', color='w', markerfacecolor=HOTSPOT_COLORS[cls],
                    markeredgecolor='#222222' if cls != 'Not Significant' else 'none',
                    markersize=8 * markerscale,
-                   label=f'{cls} [n={n_pts:,} pts]\n  {z_labels[cls]}')
+                   label=f'{cls}')
         )
 
     legend = ax.legend(
@@ -276,6 +276,7 @@ def build_hotspot_map(figsize=(14, 12), label_size=6.0, title_size=14,
     # ── Axes ─────────────────────────────────────────────────────────────────
     ax.set_xlabel('Easting (m) — WGS 84 / UTM Zone 51N', fontsize=7, color='#444444')
     ax.set_ylabel('Northing (m) — WGS 84 / UTM Zone 51N', fontsize=7, color='#444444')
+    ax.ticklabel_format(style='plain')
 
     # ── Title ────────────────────────────────────────────────────────────────
     ax.set_title(
@@ -283,20 +284,10 @@ def build_hotspot_map(figsize=(14, 12), label_size=6.0, title_size=14,
         fontsize=title_size, fontweight='bold', color='#111111', pad=12, loc='left'
     )
     n_native = len(gdf_native)
-    ax.text(0.0, 1.01,
-            f'Valid native trees mapped: {n_native:,} (Endemic + Indigenous)  |  '
-            f'Grid: {CELL_SIZE}m x {CELL_SIZE}m  |  '
-            f'Weights: Queen contiguity  |  EPSG:32651',
-            transform=ax.transAxes, fontsize=7, color='#555555', va='bottom')
+    # Subtitle removed per request
 
     # ── Footer ───────────────────────────────────────────────────────────────
-    footer = (
-        'Projection: WGS 84 / UTM Zone 51N (EPSG:32651)  |  '
-        'Data Sources: Tree Inventory Survey 2024; Barangay Boundaries — LGU Mandaue City  |  '
-        'Analysis: Python 3 / GeoPandas / esda / libpysal  |  '
-        'Figure 3. Point-Based Native Tree Hotspot Map (Gi*)'
-    )
-    fig.text(0.01, 0.005, footer, fontsize=footer_size - 0.5, color='#666666', style='italic')
+    # Footer removed per request
 
     plt.tight_layout(rect=[0, 0.02, 1, 1])
     return fig, ax

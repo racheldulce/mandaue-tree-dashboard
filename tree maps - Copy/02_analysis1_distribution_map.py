@@ -223,7 +223,7 @@ def build_distribution_map(figsize=(14, 12), label_size=6.0,
             marker=STATUS_MARKERS[status],
             alpha=0.75,
             zorder=STATUS_ZORDER[status],
-            label=f'{status} (n={len(sub):,})',
+            label=f'{status}',
         )
 
     # ── Cartographic elements ────────────────────────────────────────────────
@@ -237,7 +237,7 @@ def build_distribution_map(figsize=(14, 12), label_size=6.0,
         Line2D([0], [0], marker=STATUS_MARKERS[s], color='w',
                markerfacecolor=STATUS_COLORS[s],
                markersize=7 * markerscale,
-               label=f'{s}  (n={status_counts.get(s, 0):,})')
+               label=f'{s}')
         for s in STATUS_ORDER
     ]
     legend = ax.legend(
@@ -261,6 +261,7 @@ def build_distribution_map(figsize=(14, 12), label_size=6.0,
     # ── Axes labels ──────────────────────────────────────────────────────────
     ax.set_xlabel('Easting (m) — WGS 84 / UTM Zone 51N', fontsize=7, color='#444444')
     ax.set_ylabel('Northing (m) — WGS 84 / UTM Zone 51N', fontsize=7, color='#444444')
+    ax.ticklabel_format(style='plain')
 
     # ── Title block ──────────────────────────────────────────────────────────
     total_pts = len(gdf_pts)
@@ -274,21 +275,10 @@ def build_distribution_map(figsize=(14, 12), label_size=6.0,
     )
 
     # ── Subtitle / total count ───────────────────────────────────────────────
-    ax.text(0.0, 1.01,
-            f'Total trees mapped: {total_pts:,}  |  27 Barangays  |  '
-            f'Coordinate System: WGS 84 / UTM Zone 51N (EPSG:32651)',
-            transform=ax.transAxes, fontsize=subtitle_size - 2,
-            color='#555555', va='bottom')
+    # Subtitle removed per request
 
     # ── Footer ───────────────────────────────────────────────────────────────
-    footer = (
-        'Projection: WGS 84 / UTM Zone 51N (EPSG:32651)  |  '
-        'Data Sources: Tree Inventory Survey 2024; Barangay Boundaries — LGU Mandaue City  |  '
-        'Analysis: Python 3 / GeoPandas / Matplotlib  |  '
-        'Figure 1. Tree Distribution Map'
-    )
-    fig.text(0.01, 0.005, footer, fontsize=footer_size - 0.5,
-             color='#666666', style='italic', wrap=True)
+    # Footer removed per request
 
     plt.tight_layout(rect=[0, 0.02, 1, 1])
     return fig, ax
